@@ -1,0 +1,27 @@
+[project]
+name = "youtube-transcript-summarizer"
+version = "0.1.0"
+description = "Fetch native YouTube transcripts with Supadata and summarize them with Gemini."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Matheus Lacerda" }]
+requires-python = ">=3.9"
+dependencies = [
+    "supadata>=1.6.0",
+    "google-genai>=2.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+yt-summarize = "summarize:main"
+
+[project.urls]
+Homepage = "https://www.iadots.com"
+Supadata = "https://supadata.ai/r/HHD1MQYC"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["summarize"]
